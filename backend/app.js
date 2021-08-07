@@ -11,6 +11,7 @@ var addOfferingRouter = require('./routes/Offering/addOffering');
 var addOfferTypeRouter = require('./routes/Offering/addOfferType');
 var getOfferingListRouter = require('./routes/Offering/getOfferingList');
 var getOfferTypesRouter = require('./routes/Offering/getOfferTypes');
+var deleteOfferingRouter = require('./routes/Offering/deleteOffering');
 
 //Member
 var addMemberRouter = require('./routes/Member/addMember');
@@ -49,6 +50,7 @@ app.use('/api/addOffering', addOfferingRouter);
 app.use('/api/addOfferType', addOfferTypeRouter);
 app.use('/api/getOfferingList', getOfferingListRouter);
 app.use('/api/getOfferTypes', getOfferTypesRouter);
+app.use('/api/deleteOffering', deleteOfferingRouter);
 
 //Member
 app.use('/api/addMember', addMemberRouter);

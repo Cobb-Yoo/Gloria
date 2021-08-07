@@ -9,7 +9,7 @@ router.post('/', (req, res) => {
     var data = req.body.param;
     const mydb = new Mydb(pool);
 
-    const query = `insert into gloria.offertable (offerType) values('${data}')`;
+    const query = `delete from gloria.offering where oid = '${data}'`;
 
     mydb.execute(conn => {
         conn.query(query, (err, result) => {
