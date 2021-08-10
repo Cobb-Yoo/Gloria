@@ -6,7 +6,7 @@ const Mydb = require('../../db');
 const pool = new Pool();
 
 router.post('/', (req, res) => {
-    var data = req.body.param;
+    var data = req.body.param.oid;
     const mydb = new Mydb(pool);
 
     const query = `delete from gloria.offering where oid = '${data}'`;
