@@ -5,7 +5,7 @@ const Pool = require("../../pool");
 const Mydb = require('../../db');
 const pool = new Pool();
 
-router.post('/', (req, res) => {
+router.get('/', (req, res) => {
   const mydb = new Mydb(pool);
 
   const query = `select offerType, sum(amount) as amount from offering, offertable where offertable.offerTeg = offering.offerteg group by offerType;`;

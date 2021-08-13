@@ -5,7 +5,7 @@ const Pool = require("../../pool");
 const Mydb = require('../../db');
 const pool = new Pool();
 
-router.post('/', (req, res) => {
+router.get('/', (req, res) => {
   const query = `select expen.elid, elname, value, date_format(dates, '%Y-%m-%d') as dates from expen, expenleaf where expenleaf.elid = expen.elid;`;
   
   const mydb = new Mydb(pool);

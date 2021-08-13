@@ -5,7 +5,7 @@ const Pool = require("../../pool");
 const Mydb = require('../../db');
 const pool = new Pool();
 
-router.post('/', (req, res) => {
+router.get('/', (req, res) => {
   const query = `select mname from member`;
   
   const mydb = new Mydb(pool);

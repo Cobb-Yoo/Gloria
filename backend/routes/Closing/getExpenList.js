@@ -5,7 +5,7 @@ const Pool = require("../../pool");
 const Mydb = require('../../db');
 const pool = new Pool();
 
-router.post('/', (req, res) => {
+router.get('/', (req, res) => {
   const mydb = new Mydb(pool);
 
   const query = `select expen.elid, elname, sum(expen.value) as value from expen, expenleaf where expen.elid = expenleaf.elid group by expenleaf.elname;`;
