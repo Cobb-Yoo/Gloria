@@ -6,7 +6,7 @@ const Mydb = require('../../db');
 const pool = new Pool();
 
 
-router.post('/', (req, res) => {
+router.get('/', (req, res) => {
   const query = `SELECT oid, mname, offertype, amount, date_format(dates, '%Y-%m-%d') as dates FROM offering left JOIN member ON offering.mid= member.mid JOIN offertable on offering.offerteg = offertable.offerteg order by oid desc;`;
   
   const mydb = new Mydb(pool);
